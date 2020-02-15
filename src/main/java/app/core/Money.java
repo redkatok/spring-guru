@@ -1,25 +1,38 @@
 package app.core;
 
 
-public abstract class Money {
+public class Money {
+
     protected int amount;
+    protected String currency;
 
-    public abstract Money times(int multiplier);
-
-    public static Money dollar(int amount){
-        return new Dollar(amount);
+    public Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
     }
 
-    public static Money franc(int amount){
-        return new Franc(amount);
+    public static Money dollar(int amount) {
+        return new Money(amount, "USD");
     }
+
+    public static Money franc(int amount) {
+        return new Money(amount, "CHF");
+    }
+
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, this.currency);
+    }
+
+    protected String currency() {
+        return currency;
+    }
+
 
     @Override
     public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount
-                && this.getClass().equals(object.getClass());
+                && this.currency == money.currency;
     }
-
 
 }
