@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: app.core.MoneyTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.035 s <<< FAILURE! - in app.core.MoneyTest
+testMultiplicationDollar  Time elapsed: 0.027 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <app.core.Dollar@5f282abb> but was: <app.core.Dollar@167fdd33>
+	at app.core.MoneyTest.testMultiplicationDollar(MoneyTest.java:15)
+
+testMultiplicationFranc  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <app.core.Franc@480bdb19> but was: <app.core.Franc@2a556333>
+	at app.core.MoneyTest.testMultiplicationFranc(MoneyTest.java:29)
+
+testEqualityDollar  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <app.core.Dollar@7d70d1b1> but was: <app.core.Franc@2a742aa2>
+	at app.core.MoneyTest.testEqualityDollar(MoneyTest.java:20)
+

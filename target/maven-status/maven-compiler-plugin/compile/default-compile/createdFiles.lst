@@ -1,1 +1,3 @@
-app/core/App.class
+app/core/Money.class
+app/core/Franc.class
+app/core/Dollar.class
